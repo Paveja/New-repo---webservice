@@ -1,0 +1,108 @@
+revolte:
+  version: '1.0'
+  project: Test Proj 1
+  appName: New FE
+  config:
+    codeReview:
+      summarize: true
+      suggestFixes: true
+      commentStyle: Balanced
+    testSuite:
+      command: npm run test
+    automationTestSuite:
+      command: npm run test:automation
+  workflow:
+    developerWorkflow:
+      enabled: true
+  env:
+    staging:
+      branch: main
+      codeReview: true
+      testSuite: true
+      automationTestSuite: true
+      services:
+        rid_1:
+          type: WEB_SERVICE
+          name: web_service
+          entryPoint: index.js
+          properties:
+            health: /health
+            port: 8080
+            loadBalancerMode: dedicated
+            variables:
+              BASE_URL: /api/v1
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+    qa:
+      branch: main
+      codeReview: true
+      testSuite: true
+      automationTestSuite: true
+      services:
+        rid_1:
+          type: WEB_SERVICE
+          name: web_service
+          entryPoint: index.js
+          properties:
+            health: /health
+            port: 8080
+            loadBalancerMode: dedicated
+            variables:
+              BASE_URL: /api/v1
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+    production:
+      branch: main
+      codeReview: true
+      testSuite: true
+      automationTestSuite: true
+      services:
+        rid_1:
+          type: WEB_SERVICE
+          name: web_service
+          entryPoint: index.js
+          properties:
+            health: /health
+            port: 8080
+            loadBalancerMode: dedicated
+            variables:
+              BASE_URL: /api/v1
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            autoScaling:
+              replica:
+                min: 1
+                max: 1
+              utilization:
+                cpu:
+                  target: 70
+                memory:
+                  target: 70
+              behavior:
+                scaleDown:
+                  stabilizationWindow: 300
+    preview:
+      codeReview: true
+      testSuite: true
+      automationTestSuite: true
+      services:
+        rid_1:
+          type: WEB_SERVICE
+          name: web_service
+          entryPoint: index.js
+          properties:
+            health: /health
+            port: 8080
+            loadBalancerMode: dedicated
+            variables:
+              BASE_URL: /api/v1
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
