@@ -9,16 +9,14 @@ revolte:
       commentStyle: Balanced
     testSuite:
       command: npm run test
-    automationTestSuite:
-      command: npm run test:automation
   workflow:
     developerWorkflow:
       enabled: true
   env:
     staging:
-      branch: main
       codeReview: true
       testSuite: true
+      branch: main
       automationTestSuite: true
       services:
         rid_1:
@@ -36,9 +34,9 @@ revolte:
             memory: 1
             storage: 30
     qa:
-      branch: main
       codeReview: true
       testSuite: true
+      branch: main
       automationTestSuite: true
       services:
         rid_1:
@@ -56,9 +54,9 @@ revolte:
             memory: 1
             storage: 30
     production:
-      branch: main
       codeReview: true
       testSuite: true
+      branch: main
       automationTestSuite: true
       services:
         rid_1:
