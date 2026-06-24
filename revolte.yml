@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Test Proj 1
-  appName: New FE
+  project: New Project
+  appName: webser
   config:
     codeReview:
       summarize: true
@@ -13,11 +13,10 @@ revolte:
     developerWorkflow:
       enabled: true
   env:
-    staging:
+    qa:
       codeReview: true
       testSuite: true
       branch: main
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -33,11 +32,10 @@ revolte:
             cpu: 2
             memory: 1
             storage: 30
-    qa:
+    staging:
       codeReview: true
       testSuite: true
       branch: main
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -57,7 +55,6 @@ revolte:
       codeReview: true
       testSuite: true
       branch: main
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -88,7 +85,6 @@ revolte:
     preview:
       codeReview: true
       testSuite: true
-      automationTestSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
