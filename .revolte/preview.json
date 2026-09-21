@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "start": "npm run dev -- --hostname 0.0.0.0 --port 4173",
+  "port": 4173,
+  "install": [
+    {
+      "name": "npm dependencies",
+      "check": "test -d node_modules && test -f node_modules/next/package.json",
+      "run": "npm ci",
+      "inputs": ["package.json", "package-lock.json"]
+    }
+  ]
+}

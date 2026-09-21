@@ -1,0 +1,12 @@
+
+> astro-survivor@0.1.0 dev
+> next dev --turbopack --hostname 0.0.0.0 --port 4173
+
+▲ Next.js 16.3.4 (Turbopack)
+- Local:         http://localhost:4173
+- Network:       http://0.0.0.0:4173
+✓ Ready in 269ms
+✓ Running next.config.ts took 19ms
+
+ GET / 200 in 1803ms (next.js: 1698ms, application-code: 105ms)
+ GET /?_r=8_0 200 in 38ms (next.js: 7ms, application-code: 31ms)
