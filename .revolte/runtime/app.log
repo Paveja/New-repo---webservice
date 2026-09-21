@@ -5,8 +5,7 @@
 ▲ Next.js 16.3.4 (Turbopack)
 - Local:         http://localhost:4173
 - Network:       http://0.0.0.0:4173
-✓ Ready in 269ms
-✓ Running next.config.ts took 19ms
+✓ Ready in 255ms
+✓ Running next.config.ts took 22ms
 
- GET / 200 in 1803ms (next.js: 1698ms, application-code: 105ms)
- GET /?_r=8_0 200 in 38ms (next.js: 7ms, application-code: 31ms)
+ GET /health 200 in 343ms (next.js: 330ms, application-code: 13ms)
